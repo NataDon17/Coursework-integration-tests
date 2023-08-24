@@ -1,5 +1,7 @@
 package com.skypro.simplebanking.entity;
 
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users")
+@NoArgsConstructor
 public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user-generator")
@@ -16,6 +19,15 @@ public class User {
   private String password;
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
   private Collection<Account> accounts;
+
+  public User(String username) {
+    this.username = username;
+  }
+
+  public User(String username, String password) {
+    this.username = username;
+    this.password = password;
+  }
 
   public Long getId() {
     return id;
