@@ -23,6 +23,7 @@
 ## Для тестирования использованы следующие библиотеки и технологии:
 - Java
 - Spring Boot
+- Spring Security
 - TestContainers
 - Docker
 - JUnit
