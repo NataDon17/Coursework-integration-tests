@@ -21,10 +21,9 @@
 - Начисление и снятие пользователем средств со своего счета.
 - Перевод средств между счетами разных пользователей.
 ## Для тестирования использованы следующие библиотеки и технологии:
-- Java
-- Spring Boot
-- Spring Security
-- TestContainers
-- Docker
-- JUnit
-- Mockito
+
+Язык и окружение: Java 17, Spring Boot/Web/Security/Admin, Hibernate, PostgreSQL.
+
+Тестирование: JUnit, Mockito, TestContainers
+
+Прочее: Docker,Swagger
